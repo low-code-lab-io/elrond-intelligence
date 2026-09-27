@@ -1,0 +1,280 @@
+:root {
+  --paper: #faf9f6;
+  --ink: #1c1b18;
+  --muted: #6e6858;
+  --hairline: #ddd7c9;
+  --accent: #3f5e43;
+  --tag-bg: #efece2;
+  --tag-ink: #4a4535;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1a1912;
+    --ink: #ece7d9;
+    --muted: #a39c88;
+    --hairline: #38352a;
+    --accent: #8fbf8a;
+    --tag-bg: #262319;
+    --tag-ink: #cfc9b6;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #1a1912;
+  --ink: #ece7d9;
+  --muted: #a39c88;
+  --hairline: #38352a;
+  --accent: #8fbf8a;
+  --tag-bg: #262319;
+  --tag-ink: #cfc9b6;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, Georgia, serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px;
+}
+
+header.masthead {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+
+.dek {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 60ch;
+  font-style: italic;
+}
+
+.count {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+.count strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--hairline);
+  padding: 10px 14px;
+  margin-bottom: 18px;
+}
+
+.search-row label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.search-row input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  min-width: 0;
+}
+
+.facet {
+  margin-bottom: 14px;
+}
+
+.facet-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-family: inherit;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--ink);
+  padding: 5px 12px;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.pill:hover {
+  border-color: var(--muted);
+}
+
+.pill[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.clear-row {
+  margin-top: 10px;
+}
+
+.clear-btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-style: italic;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.list {
+  border-top: 1px solid var(--hairline);
+}
+
+.entry {
+  padding-block: 22px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.entry-type {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.entry-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.entry-name a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.entry-name a:hover {
+  border-bottom-color: var(--ink);
+}
+
+.entry-desc {
+  font-size: 16px;
+  margin: 0 0 10px;
+  max-width: 62ch;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  background: var(--tag-bg);
+  color: var(--tag-ink);
+  padding: 2px 9px;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+.tag.sector {
+  font-style: italic;
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--muted);
+}
+
+.meta-line {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.empty {
+  padding-block: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.note {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--hairline);
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
