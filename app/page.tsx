@@ -23,7 +23,7 @@ export default async function HomePage() {
       <Directory entities={entities} />
 
       <p className="note">
-        Every entry is manually reviewed and verified before it&apos;s
+        Auto-deploy test — every entry is manually reviewed and verified before it&apos;s
         published.
       </p>
     </div>
